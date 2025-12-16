@@ -1,0 +1,265 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HTML & BODY ================= */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body.page-grid {
+  display: grid;
+  grid-template-rows: 10vh 1fr 10vh;   /* 🔥 10% / 80% / 10% */
+  font-family: Arial, sans-serif;
+
+  background-image: url("../images/back.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================= HEADER (10%) ================= */
+.site-header {
+  background-color: #222;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* NAV */
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  color: #f4b400;
+}
+
+/* ================= MAIN CONTENT (80%) ================= */
+.site-main {
+  overflow-y: auto;            /* 🔥 Scroll only here */
+  padding: 40px 20px;
+}
+
+/* ================= HOME ================= */
+.home {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0,0.55);
+}
+
+.intro h2 {
+  font-size: 36px;
+  color: white;
+}
+
+.intro h5 {
+  color: #f1f1f1;
+  margin-top: 10px;
+}
+
+/* ================= LOGIN ================= */
+.login-wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.login-card {
+  width: 320px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-align: center;
+  color: white;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.login-card button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #e6b800;
+}
+
+/* ================= ABOUT PAGE ================= */
+.projects-section {
+  padding: 40px;
+  background: #f5f7fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+.project-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card p {
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= CONTACT ================= */
+.contact-top {
+  background: #0a6b68;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card {
+  background: #0b7a77;
+  color: white;
+  width: 420px;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.contact-bottom {
+  display: flex;
+  gap: 60px;
+  padding: 80px 60px;
+  background: white;
+}
+
+/* ================= DASHBOARDS ================= */
+.dashboard {
+  padding: 40px;
+}
+
+.styled-table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.styled-table th {
+  background: #003366;
+  color: white;
+  padding: 12px;
+}
+
+.styled-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.styled-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* ================= FOOTER (10%) ================= */
+.site-footer {
+  background: #222;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  body.page-grid {
+    grid-template-rows: 15vh 1fr 10vh;
+  }
+
+  .contact-bottom {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+}

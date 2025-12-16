@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Website Title -->
+  <title>RLNC</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+<body class="page-grid">
+
+  <!-- ================= HEADER (10%) ================= -->
+  <header class="site-header">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="RLNC Logo">
+      </div>
+      <span class="company-name">
+        Rithwick Lakshmi Narasimha Constructions
+      </span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/login">Login</a>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN CONTENT (80%) ================= -->
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ================= FOOTER (10%) ================= -->
+  <footer class="site-footer">
+    © 2025 Rithwick Lakshmi Narasimha Constructions
+  </footer>
+
+</body>
+</html>

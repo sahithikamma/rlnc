@@ -1,0 +1,29 @@
+<h2>Salary Details</h2>
+
+<table border="1" width="80%" align="center">
+    <tr>
+        <th>Month</th>
+        <th>Salary</th>
+    </tr>
+
+    {% if salary %}
+        {% for sal in salary %}
+        <tr>
+            <td>{{ sal["month"] }}</td>
+            <td>{{ sal["total"] }}</td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td colspan="2" align="center">No salary records found</td>
+        </tr>
+    {% endif %}
+</table>
+
+<br>
+<center>
+    <a href="{{ url_for('logout') }}">
+        <button>Logout</button>
+    </a>
+</center>
+      

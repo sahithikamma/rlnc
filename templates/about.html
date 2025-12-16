@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}About | RLNC{% endblock %}
+
+{% block content %}
+<section class="projects-section">
+  <h1 class="section-title">Our Project Locations</h1>
+
+  <h2 class="state-title">Andhra Pradesh</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/polavaram.jpg') }}">
+      <p>Polavaram Project – Packages 63, 64 & 65</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/gnss.jpg') }}">
+      <p>GNSS Project – Gandikota</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/hnss.jpg') }}">
+      <p>HNSS – Handri Neeva Canal</p>
+    </div>
+  </div>
+
+  <h2 class="state-title">Maharashtra</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/rvnl.jpg') }}">
+      <p>RVNL Tunnel Construction Project</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
